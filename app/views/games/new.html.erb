@@ -1,0 +1,18 @@
+<!-- <h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p> -->
+
+<h1>Let's play the Longest Word Game!</h1>
+<br>
+<br>
+
+<%= @letters %>
+
+<br>
+<br>
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <label for="">What is the longest word you can come up with?</label>
+  <input type="text" name="try">
+  <input type="submit" value="Play">
+</form>
